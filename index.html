@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            width: 100%;
+        }
+
+        /* Navigation */
+        nav {
+            width: 100%;
+            height: 70px;
+            background-color: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 100px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        nav ul li a:hover {
+            color: orange;
+        }
+
+        /* Home Banner */
+        .banner {
+            width: 100%;
+            height: 400px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* About Us */
+        .about {
+            width: 100%;
+            padding: 60px 50px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-images {
+            width: 50%;
+            display: flex;
+            gap: 15px;
+        }
+
+        .about-images img {
+            width: 50%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .about-content {
+            width: 50%;
+        }
+
+        .about-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Services */
+        .services {
+            width: 100%;
+            padding: 60px 50px;
+            background-color: #333;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .services p {
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+            gap: 30px;
+        }
+
+        .service-container1 {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            min-width: 0;
+        }
+
+        .service-card1 {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            min-width: 0;
+        }
+
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-card1 img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-card h3 {
+            padding: 15px;
+            color: #333;
+        }
+
+        .service-card1 h3 {
+            padding: 15px;
+            color: #333;
+        }
+
+        /* Contact */
+        .contact {
+            width: 100%;
+            padding: 50px;
+            text-align: center;
+            background-color: #222;
+            color: white;
+        }
+
+        .contact h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            line-height: 1.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                height: auto;
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .banner {
+                height: 250px;
+            }
+
+            .about {
+                padding: 30px 20px;
+                flex-direction: column;
+            }
+
+            .about-images,
+            .about-content {
+                width: 100%;
+            }
+
+            .about-images img {
+                height: 220px;
+            }
+
+            .services {
+                padding: 40px 20px;
+            }
+
+            .service-container {
+                grid-template-columns: repeat(7, 1fr);
+            }
+
+            .service-card img {
+                height: 150px;
+
+            }
+
+            .service-card1 img {
+                height: 150px;
+
+            }
+
+            .contact {
+                padding: 35px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .service-container {
+                grid-template-columns: repeat(7, minmax(0, 1fr));
+            }
+        }
+
+        .about_h {
+            text-align: center;
+            font-size: 50px;
+            text-decoration: underline;
+        }
+
+
+
+        .signin {
+            padding: 8px 20px;
+            border-radius: 15px;
+            border: 2px solid white;
+            margin-left: 350px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#category">Category</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="" class="signin">sign in</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Banner -->
+    <section class="banner" id="home">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80"
+            alt="Home Banner">
+    </section>
+
+    <h1 class="about_h">ABOUT US</h1>
+
+    <!-- About Us -->
+    <section class="about" id="about">
+
+        <div class="about-images">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=600&q=80"
+                alt="Our Office">
+
+            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=80"
+                alt="Our Team">
+        </div>
+
+        <div class="about-content">
+
+            <p>
+                Welcome to our website. We are dedicated to providing
+                high-quality services and creative solutions to our customers.
+                Our goal is to deliver excellent results through innovation,
+                teamwork and commitment. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea in nihil
+                distinctio similique a, labore quibusdam, autem tempora reprehenderit illum modi officia iusto corrupti
+                soluta saepe nulla fugiat incidunt, hic eaque voluptatibus? Sapiente dolor voluptate facilis laboriosam!
+                Enim quibusdam tempore officiis porro fugit quam maxime veritatis cumque culpa dignissimos hic nihil
+                cupiditate velit quae quod libero, dolores incidunt distinctio soluta esse in. Voluptatem saepe nisi
+                sint quis! Voluptas voluptatem rem distinctio quam assumenda a iure impedit velit tempore neque odio,
+                modi asperiores aspernatur, deserunt consequuntur consequatur aut. Quo corrupti incidunt ipsa alias,
+                eius ex temporibus veritatis similique? Ea, perspiciatis officia.
+                Our experienced team works hard to understand your needs
+                and provide reliable solutions. We believe in building
+                long-term relationships through trust and quality service.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Additional About Section -->
+    <section class="about">
+
+        <div class="about-content">
+
+            <p>
+
+                Welcome to our website. We are dedicated to providing
+                high-quality services and creative solutions to our customers.
+                Our goal is to deliver excellent results through innovation,
+                teamwork and commitment. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea in nihil
+                distinctio similique a, labore quibusdam, autem tempora reprehenderit illum modi officia iusto corrupti
+                soluta saepe nulla fugiat incidunt, hic eaque voluptatibus? Sapiente dolor voluptate facilis laboriosam!
+                Enim quibusdam tempore officiis porro fugit quam maxime veritatis cumque culpa dignissimos hic nihil
+                cupiditate velit quae quod libero, dolores incidunt distinctio soluta esse in. Voluptatem saepe nisi
+                sint quis! Voluptas voluptatem rem distinctio quam assumenda a iure impedit velit tempore neque odio,
+                modi asperiores aspernatur, deserunt consequuntur consequatur aut. Quo corrupti incidunt ipsa alias,
+                eius ex temporibus veritatis similique? Ea, perspiciatis officia.
+                Our experienced team works hard to understand your needs
+                and provide reliable solutions. We believe in building
+                long-term relationships through trust and quality service.
+            </p>
+        </div>
+
+        <div class="about-images">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80"
+                alt="Team Collaboration">
+
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80"
+                alt="Team Meeting">
+        </div>
+
+    </section>
+
+    <h2 style="text-align: center;
+            font-size: 50px;
+            text-decoration: underline;
+            color: #000;">Categories</h2>
+    <!-- Category -->
+    <section class="services" id="category">
+
+        <div class="service-container1" style="gap: 100px;">
+
+            <div class="service-card1">
+                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=500&q=80"
+                    alt="Business">
+                <h3>Business</h3>
+            </div>
+
+            <div class="service-card1">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80"
+                    alt="Technology">
+                <h3>Technology</h3>
+            </div>
+
+            <div class="service-card1">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80"
+                    alt="Teamwork">
+                <h3>Teamwork</h3>
+            </div>
+            <div class="service-card1">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80"
+                    alt="Teamwork">
+                <h3>Teamwork</h3>
+            </div>
+
+        </div>
+    </section>
+    <h2 class="about_h">Services</h2>
+    <!-- Services -->
+    <section class="services" id="services" style="background-color:rgb(30, 30, 74);">
+
+
+        <div class="service-container">
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80"
+                    alt="Web Development">
+                <h3>Web Development</h3>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80"
+                    alt="Data Analytics">
+                <h3>Data Analytics</h3>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80"
+                    alt="Digital Marketing">
+                <h3>Digital Marketing</h3>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=500&q=80"
+                    alt="Consulting">
+                <h3>Consulting</h3>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=500&q=80"
+                    alt="Software Solutions">
+                <h3>Software Solutions</h3>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=500&q=80"
+                    alt="Training">
+                <h3>Training</h3>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80"
+                    alt="Team Support">
+                <h3>Team Support</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+
+        <p>Email: info@mywebsite.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Address: Coimbatore, Tamil Nadu, India</p>
+    </section>
+
+</body>
+
+</html>
